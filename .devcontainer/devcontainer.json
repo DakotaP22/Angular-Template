@@ -14,7 +14,15 @@
 				"johnpapa.angular-essentials",
 				"infinity1207.angular2-switcher",
 				"formulahendry.auto-close-tag"
-			]
+			],
+			"mcp": {
+				"servers": {
+					"clickup": {
+						"type": "http",
+						"url": "https://mcp.clickup.com/mcp"
+					}
+				}
+			}
 		}
 	}
 }
