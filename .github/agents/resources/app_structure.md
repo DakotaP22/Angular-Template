@@ -10,8 +10,10 @@ Assets are stored in the `public` folder at the root of the project directory. D
 # Feature Structure
 All features should be placed under `src/app/features` and use the following structure:
 
+```
 src/app/features
 |-feature-1
+  |-features (if there are sub-features, recursively follow the same structure)
   |-pages
     |-page-1.component.ts
   |-components
@@ -23,5 +25,6 @@ src/app/features
   |-guards
     |-...
   |-feature-1.routes.ts
+```
 
 **DO NOT** add empty folders when creating features.
