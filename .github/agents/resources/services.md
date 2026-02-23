@@ -22,7 +22,9 @@ Data Services **must** expose the following api:
     - triggering an update in a dependent `Observable` for the `HttpClient` approach
     - any additional methods that are necessary for interacting with the resource, such as creating, updating, or deleting data.
 
-Use the `Observable` approach **only** if you need to support complex data transformations or async logic. For most use cases, the `ResourceSignal` approach is recommended as it provides a simpler and more efficient way to manage data in Angular applications.
+In most cases where obserables are needed, you **should** use rxResource to create a `ResourceSignal` that can have its signals exposed. This allows you to keep the benefits of using `ResourceSignal` while still being able to use `Observables` when necessary.
+
+Use the `Observable` approach **only** if you need to support complex data transformations or async logic that is not easily handled with `ResourceSignal`. In general, the `ResourceSignal` approach is recommended for most data services, as it provides a simpler and more efficient way to manage data fetching and state in Angular applications.
 
 ## Utility Services
 Utility services provide utility functions that can be used across the application, such as formatting data or handling common tasks. These services should be designed to be reusable and should not contain any state or logic that is specific to a particular component or feature. Utility services can be injected into any component or other service that needs to use their functionality, promoting code reusability and separation of concerns.
