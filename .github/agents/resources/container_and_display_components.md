@@ -1,20 +1,20 @@
 # Container and Display Components
 Implement the **Container and Display Component** Architecture to simplify dataflow, event management, and component and orchestration. 
 
-# Container Components
+## Container Components
 Container components are __containers__ -- typically for Display Components. They are the only components allowed to talk to services and are responsible for:
 
 1. Passing data to container components
 2. Handling events and passing them to services for handling
 
 
-# Display Components
+## Display Components
 Display Components are **not allowed** to talk to services. They are relatively low logic and are used mostly to __display__ components while emitting events from any user interaction they enable. 
 
-# Routing Considerations
+## Routing Considerations
 Container Components are the primary type of components that will be routed too. It is very rare that a Display Component is routed unless the content being routed is static.
 
-# Nesting Considerations
+## Nesting Considerations
 Avoid excessive **prop drilling** like the plague. In general, using the following list for prioritizing structuring nested components:
 
 1. Container Components **may** nest other Container Components
